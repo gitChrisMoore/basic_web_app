@@ -19,9 +19,27 @@ var server = require('http').createServer(app);
 require('./config/config')(app);
 require('./routes')(app);
 
-// Start server
-server.listen(config.port, config.ip, function () {
-  console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+// try to connect to the mongo database
+// if the database cannot be connected
+// exit the application
+
+// if the mongo connection fails
+
+console.log('Trying to connect to the following MongoDB Instance: 'config.mongo.uri)
+mongoose.connect(config.mongo.uri)
+mongoose.connection.on('error', function(err) {
+  console.log("Error while connecting to MongoDB:  " + err);
+  process.exit();
+});
+
+
+mongoose.connection.on('connected', function(err) {
+  console.log('mongoose is now connected');
+  // start app here
+  server.listen(config.port, config.ip, function () {
+   console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+  });
+
 });
 
 // Expose app

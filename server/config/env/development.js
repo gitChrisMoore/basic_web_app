@@ -18,7 +18,7 @@ module.exports = {
   mongo: {
     uri:    process.env.MONGOLAB_URI ||
             process.env.MONGOHQ_URL ||
-            'mongodb://172.21.67.30:27017/amwayio'
+            'mongodb://172.30.53.201:27017/amwayio'
   },
   seedDB: false
 };
