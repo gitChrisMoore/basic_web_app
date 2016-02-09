@@ -25,7 +25,7 @@ require('./routes')(app);
 
 // if the mongo connection fails
 
-console.log('Trying to connect to the following MongoDB Instance: 'config.mongo.uri)
+console.log('Trying to connect to the following MongoDB Instance: ' + config.mongo.uri)
 mongoose.connect(config.mongo.uri)
 mongoose.connection.on('error', function(err) {
   console.log("Error while connecting to MongoDB:  " + err);

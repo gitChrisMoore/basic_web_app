@@ -5,7 +5,7 @@ var errors = require('./assets/errors');
 module.exports = function(app) {
 
   // Insert routes below
-
+  app.use('/api/mongodb', require('./api/mongodb'));
 
   // app.use('/auth', require('./auth'));
 
