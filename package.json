@@ -1,0 +1,45 @@
+{
+  "name": "amwayio-web",
+  "version": "1.0.0",
+  "description": "NetOps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmwayCorp/amwayio-web.git"
+  },
+  "author": "Chris Moore and Scott Holwerda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmwayCorp/amwayio-web/issues"
+  },
+  "homepage": "https://github.com/AmwayCorp/amwayio-web#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.14.2",
+    "compression": "^1.6.1",
+    "connect-livereload": "^0.5.4",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "favicon": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-develop-server": "^0.5.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-shell": "^0.5.2",
+    "kerberos": "0.0.18",
+    "lodash": "^4.3.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.2",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0"
+  }
+}
