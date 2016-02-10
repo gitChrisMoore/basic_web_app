@@ -25,8 +25,25 @@ var fs = require('fs');
       }
   });
 
-  app.get('/:api/:resources',function(req,res,next) {
-      var path = __dirname + '/' + req.params.api + '/' + req.params.resources + '.model.js';
+  function buildQuery(queryString) {
+    
+    var query = {}
+
+    for (var propName in queryString) {
+        if (queryString.hasOwnProperty(propName)) {
+            console.log(propName, queryString[propName])
+            query[propName] = queryString[propName];
+        }
+    }
+  return query
+  }
+
+  app.get('/:api/:ocean/:lake/:pond',function(req,res,next) {
+      var path = __dirname + '/' + req.params.api +
+                             '/' + req.params.ocean + 
+                             '/' + req.params.lake +
+                             '/' + req.params.pond + 
+                              '.model.js';
 
       //console.log('step 2')
       //console.log(path)
@@ -36,9 +53,13 @@ var fs = require('fs');
       {
             var collection = require(path)
 
-            console.log(req.query.collection)
+            console.log(req.query._id)
 
-            collection.find()
+            var query = buildQuery(req.query)
+
+            console.log(query)
+
+            collection.find(query)
                 .exec(function (err, device) {
                   if (err) {
                     return handleError(res, err);
