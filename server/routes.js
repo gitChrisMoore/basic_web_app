@@ -25,17 +25,18 @@ var fs = require('fs');
       }
   });
 
-  app.get('/:folder/:topic',function(req,res,next) {
-      var path = __dirname + '/' + req.params.folder + '/' + 'mongodb' + '/' + req.params.topic + '.model.js';
+  app.get('/:api/:resources',function(req,res,next) {
+      var path = __dirname + '/' + req.params.api + '/' + req.params.resources + '.model.js';
 
-      console.log('step 2')
-      console.log(path)
+      //console.log('step 2')
+      //console.log(path)
+      //console.log(req.query.collection)
 
       if(fs.existsSync(path))
       {
             var collection = require(path)
 
-            console.log(collection)
+            console.log(req.query.collection)
 
             collection.find()
                 .exec(function (err, device) {
