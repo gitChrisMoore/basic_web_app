@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 
 
 // List of data models
-var contacts = require('./model/contacts.model');
+//var contacts = require('./model/contacts.model');
 var locations = require('./model/contacts.model');
 
 

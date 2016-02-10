@@ -1,21 +1,76 @@
 'use strict';
 
 var errors = require('./assets/errors');
+var mongoose = require('mongoose');
+
 
 module.exports = function(app) {
 
-  // Insert routes below
-  app.use('/api/mongodb', require('./api/mongodb'));
 
-  // app.use('/auth', require('./auth'));
+var fs = require('fs');
 
-  // All undefined asset or api routes should return a 404
-  app.route('/:url(api|auth|components|app|bower_components|assets)/*')
-   .get(errors[404]);
+  app.get('/:folder',function(req,res,next) {
+      var path = __dirname + '/' + req.params.folder + '/index.jade';
 
-  // All other routes should redirect to the index.html
-  app.route('/*')
-    .get(function(req, res) {
-      res.sendfile(app.get('appPath') + '/index.html');
-    });
+
+
+      if(fs.existsSync(path))
+      {
+          console.log(req.params.folder)
+          res.render(path);
+      }
+      else
+      {
+          next();
+      }
+  });
+
+  app.get('/:folder/:topic',function(req,res,next) {
+      var path = __dirname + '/' + req.params.folder + '/' + 'mongodb' + '/' + req.params.topic + '.model.js';
+
+      console.log('step 2')
+      console.log(path)
+
+      if(fs.existsSync(path))
+      {
+            var collection = require(path)
+
+            console.log(collection)
+
+            collection.find()
+                .exec(function (err, device) {
+                  if (err) {
+                    return handleError(res, err);
+                  }
+                  //console.log(device)
+                  return res.json(200, device);
+                });
+      }
+      else
+      {
+          next();
+      }
+  });
+
+  app.get('/:folder/:topic/:item',function(req,res,next) {
+      var path = __dirname + '/' + req.params.folder + '/' + req.params.topic + '/' + req.params.item;
+
+      console.log(path)
+      console.log('step three')
+
+      if(fs.existsSync(path))
+      {
+          res.render(path);
+      }
+      else
+      {
+          next();
+      }
+  });
+
+
+  app.use(function(req, res){
+      res.status(404).render(app.get('appPath') + '/views/404.html');
+  });
+
 };
