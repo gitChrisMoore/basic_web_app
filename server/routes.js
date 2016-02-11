@@ -23,16 +23,9 @@ var fs = require('fs');
 
       console.log('This is the id which was searched for ' + req.params.action)
 
-      if (req.params.action == 'findone'){
-
-        if (req.query.hasOwnProperty("id")){
-          console.log('the query has the following id: ' + req.query.id)
-          var documentId = String(req.query.id)
-          query["_id"] =  documentId
-          return query
-        }
+      if (req.params.action == 'find'){
           console.log('setting the query')
-          query = JSON.parse(req.query.wholestring)
+          query = JSON.parse(req.query.string)
           return query
       }
       console.log('found more than one')
