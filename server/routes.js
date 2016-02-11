@@ -66,15 +66,11 @@ function getMiddleware1( req, res, next ) {
           var collection = require(path)
           var query = requestParse(req)
 
-          console.log(collection)
-          console.log(query)
-
-          collection.find()
+          collection.find(query)
                .exec(function (err, result) {
                  if (err) {
                    return handleError(res, err);
                  }
-                 console.log('result')
                  return res.json(200,result)
                });
       } 
@@ -85,14 +81,10 @@ function getMiddleware1( req, res, next ) {
 
   app.get(ver1 + '/:database/:collection/:action', getMiddleware1,  function route1( req, res, next ) {
       // write response
-      next()
-
 });
 
   app.get(ver1 + '/:database/:collection/', getMiddleware1,  function route1( req, res, next ) {
       // write response
-      console.log('on two')
-
 });
 
 
