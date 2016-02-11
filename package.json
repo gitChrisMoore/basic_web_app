@@ -22,6 +22,7 @@
     "express": "^4.13.4"
   },
   "devDependencies": {
+    "async": "^1.5.2",
     "body-parser": "^1.14.2",
     "compression": "^1.6.1",
     "connect-livereload": "^0.5.4",
