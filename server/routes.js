@@ -17,9 +17,35 @@ var fs = require('fs');
 
     var query = {}
 
-    if (req.params.hasOwnProperty("id")){
-      console.log('This is the id which was searched for ' + req.params.id)
-      query["_id"] =  req.params.id
+    if (req.params.hasOwnProperty("action")){
+
+      console.log('This is the id which was searched for ' + req.params.action)
+
+      if (req.params.action == 'findone'){
+
+        if (req.query.hasOwnProperty("id")){
+          console.log('the query has the following id: ' + req.query.id)
+          var documentId = String(req.query.id)
+          query["_id"] =  documentId
+
+
+        var name = "_id";
+        var value = req.query.id;
+        var query = {};
+        query[name] = value;
+
+          return query
+
+        }
+
+
+
+
+
+          return console.log('found find')
+      }
+      console.log('found more than one')
+      //query["_id"] =  req.params.id
     }
 
     return query
@@ -40,9 +66,10 @@ function getMiddleware1( req, res, next ) {
           var collection = require(path)
           var query = requestParse(req)
 
-          console.log(path)
+          console.log(collection)
+          console.log(query)
 
-          collection.find(query)
+          collection.find()
                .exec(function (err, result) {
                  if (err) {
                    return handleError(res, err);
@@ -56,7 +83,7 @@ function getMiddleware1( req, res, next ) {
 
 
 
-  app.get(ver1 + '/:database/:collection/:id', getMiddleware1,  function route1( req, res, next ) {
+  app.get(ver1 + '/:database/:collection/:action', getMiddleware1,  function route1( req, res, next ) {
       // write response
       next()
 
@@ -64,6 +91,7 @@ function getMiddleware1( req, res, next ) {
 
   app.get(ver1 + '/:database/:collection/', getMiddleware1,  function route1( req, res, next ) {
       // write response
+      console.log('on two')
 
 });
 
