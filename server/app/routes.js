@@ -1,6 +1,6 @@
 'use strict';
 
-var errors = require('./assets/errors');
+//var errors = require('./assets/errors');
 var mongoose = require('mongoose');
 module.exports = function(app) {
 
@@ -16,13 +16,9 @@ var fs = require('fs');
   function requestParse(req) {
 
     var query = {}
-
-    console.log(req.query.wholestring)
-
+    console.log(req.query.string)
     if (req.params.hasOwnProperty("action")){
-
       console.log('This is the id which was searched for ' + req.params.action)
-
       if (req.params.action == 'find'){
           console.log('setting the query')
           query = JSON.parse(req.query.string)
@@ -31,7 +27,6 @@ var fs = require('fs');
       console.log('found more than one')
       //query["_id"] =  req.params.id
     }
-
     return query
   }
 
