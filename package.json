@@ -4,7 +4,7 @@
   "description": "NetOps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "express": "^4.13.4"
   },
   "devDependencies": {
+    "assertthat": "^0.6.0",
     "async": "^1.5.2",
     "body-parser": "^1.14.2",
     "compression": "^1.6.1",
@@ -35,12 +36,17 @@
     "gulp-develop-server": "^0.5.0",
     "gulp-nodemon": "^2.0.6",
     "gulp-shell": "^0.5.2",
+    "jasmine-node": "^1.14.5",
     "kerberos": "0.0.18",
     "lodash": "^4.3.0",
     "method-override": "^2.3.5",
+    "mocha": "^2.4.5",
     "mongoose": "^4.4.2",
     "morgan": "^1.6.1",
     "path": "^0.12.7",
-    "serve-favicon": "^2.3.0"
+    "request": "^2.69.0",
+    "serve-favicon": "^2.3.0",
+    "should": "^8.2.2",
+    "supertest": "^1.2.0"
   }
 }
