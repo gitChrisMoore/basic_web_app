@@ -2,15 +2,15 @@ var should = require('chai').should();
 var request = require('supertest');
 var mongoose = require('mongoose');
 
-var app = require('../app/app.js');
+var app = require('../../app/app.js');
 var agent = request.agent(app);
 
 
     // get users
-    describe('GET /', function() {
+    describe('GET /asdasd', function() {
       it('returns a html page that is base', function(done) {
         agent
-        .get('/')
+        .get('/asdasd')
         .expect(404)
         //.expect('Content-Type', /json/)
         .end(function(err, res) {
