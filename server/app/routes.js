@@ -16,9 +16,9 @@ var fs = require('fs');
   function requestParse(req) {
 
     var query = {}
-    console.log(req.query.string)
+    
     if (req.params.hasOwnProperty("action")){
-      console.log('This is the id which was searched for ' + req.params.action)
+      
       if (req.params.action == 'find'){
           console.log('setting the query')
           query = JSON.parse(req.query.string)
@@ -50,6 +50,7 @@ function getMiddleware1( req, res, next ) {
                  if (err) {
                    return handleError(res, err);
                  }
+                 //console.log(res)
                  return res.json(200,result)
                });
       } 
@@ -60,15 +61,21 @@ function getMiddleware1( req, res, next ) {
 
   app.get(ver1 + '/:database/:collection/:action', getMiddleware1,  function route1( req, res, next ) {
       // write response
+      console.log(res)
+      
 });
 
   app.get(ver1 + '/:database/:collection/', getMiddleware1,  function route1( req, res, next ) {
       // write response
+      
 });
 
+// Catch all for any website that does not exist
 
-  app.use(function(req, res){
-      res.status(404).render(app.get('appPath') + '/views/404.html');
-  });
+  app.get('*', function route1( req, res, next ) {
+      // write response
+      res.status(404).sendFile(__dirname + '/views/404.html');
+});
+
 
 };
