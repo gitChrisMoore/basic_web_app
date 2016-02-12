@@ -35,7 +35,7 @@ var fs = require('fs');
 
 function getMiddleware1( req, res, next ) {
     // ...
-    console.log('middleware1')
+    
       var path = __dirname + ver1
                            + '/' +  req.params.database
                            + '/' +  req.params.collection
@@ -51,7 +51,7 @@ function getMiddleware1( req, res, next ) {
                    return handleError(res, err);
                  }
                  //console.log(res)
-                 return res.json(200,result)
+                 return res.status(200).json(result)
                });
       } 
     next();
@@ -61,7 +61,7 @@ function getMiddleware1( req, res, next ) {
 
   app.get(ver1 + '/:database/:collection/:action', getMiddleware1,  function route1( req, res, next ) {
       // write response
-      console.log(res)
+      
       
 });
 
