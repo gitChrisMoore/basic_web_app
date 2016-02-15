@@ -179,7 +179,7 @@ module.exports = function (req, res) {
 	}
 
 
-	for(var i = 33; i>0; i--) {
+	for(var i = 36; i>0; i--) {
 		console.log('Iteration Number ' + i)
 
 		var k = i
@@ -196,14 +196,16 @@ module.exports = function (req, res) {
 
 						if (newListObject[l].hasOwnProperty('mask')) {
 
-							if (newListObject[l].mask == k) {
+							if (newListObject[l].mask < i) {
 
-								if (newListObject[j].ip, newListObject[l].original) {
+								if (inSubnet.Auto(newListObject[j].ip, newListObject[l].original)) {
 
 									console.log(inSubnet.Auto(newListObject[j].ip, newListObject[l].original))
 
 
 									newListObject[l].subordinate = newListObject[j]
+
+									newListObject[j].cleanup = 'yes'
 
 
 
@@ -236,9 +238,23 @@ module.exports = function (req, res) {
     // do stuff with i 
 	}
 
+	var secondObjectList = []
+
+	for (j=0; j<newListObjectlen; ++j) {
+
+		if (!newListObject[j].hasOwnProperty('cleanup')) {
+
+			secondObjectList.push(newListObject[j])
+
+		}
+
+	}
+
 	console.log('start object')
 
-	console.log(JSON.stringify(newListObject))
+	console.log(JSON.stringify(secondObjectList))
+	console.log(secondObjectList.length)
+	console.log(newListObject.length)
 
 
 	console.log('parserip: end')
