@@ -1,0 +1,951 @@
+[{
+	"listSubnet": ["10.218.64.0/24"],
+	"bgpNeighborDescription": " BRVEN-MDAAEC-1",
+	"uid": 0,
+	"bgpNeighborIp": "10.160.32.2"
+}, {
+	"listSubnet": ["10.218.3.0/24"],
+	"bgpNeighborDescription": " BRURY-HQ-1",
+	"uid": 1,
+	"bgpNeighborIp": "10.160.32.3"
+}, {
+	"listSubnet": ["10.218.4.0/24"],
+	"bgpNeighborDescription": " BRCRI-HQ-1",
+	"uid": 2,
+	"bgpNeighborIp": "10.160.32.4"
+}, {
+	"listSubnet": ["10.218.5.0/24"],
+	"bgpNeighborDescription": " BRGTM-HQ-1",
+	"uid": 3,
+	"bgpNeighborIp": "10.160.32.5"
+}, {
+	"listSubnet": ["10.218.192.0/20"],
+	"bgpNeighborDescription": " BRMEX-EPL-1-A",
+	"uid": 4,
+	"bgpNeighborIp": "10.160.32.6"
+}, {
+	"listSubnet": ["10.218.7.0/24"],
+	"bgpNeighborDescription": " BRPAN-HQ-1",
+	"uid": 5,
+	"bgpNeighborIp": "10.160.32.7"
+}, {
+	"listSubnet": ["10.218.15.0/24"],
+	"bgpNeighborDescription": " BRSLV-ANTENTO-1",
+	"uid": 6,
+	"bgpNeighborIp": "10.160.32.8"
+}, {
+	"listSubnet": ["10.218.11.128/25", "10.218.11.0/25"],
+	"bgpNeighborDescription": " BRSLV-HQ-1",
+	"uid": 7,
+	"bgpNeighborIp": "10.160.32.9"
+}, {
+	"listSubnet": ["10.218.29.129/32", "10.218.29.0/24"],
+	"bgpNeighborDescription": " BRSLV-SM-1",
+	"uid": 8,
+	"bgpNeighborIp": "10.160.32.10"
+}, {
+	"listSubnet": ["10.218.31.0/24"],
+	"bgpNeighborDescription": " BRHND-TGA-1",
+	"uid": 9,
+	"bgpNeighborIp": "10.160.32.11"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRCRI-HAD-1-A",
+	"uid": 10,
+	"bgpNeighborIp": "10.160.32.12"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRSLV-SEA-1-A",
+	"uid": 11,
+	"bgpNeighborIp": "10.160.32.13"
+}, {
+	"listSubnet": ["10.218.14.129/32", "10.218.14.0/24"],
+	"bgpNeighborDescription": " BRMEX-FC-1",
+	"uid": 12,
+	"bgpNeighborIp": "10.160.32.14"
+}, {
+	"listSubnet": ["10.226.130.2/32", "10.226.0.0/16"],
+	"bgpNeighborDescription": " BRVEN-HQ-1",
+	"uid": 13,
+	"bgpNeighborIp": "10.160.32.15"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRVEN-MCOAEC-1",
+	"uid": 14,
+	"bgpNeighborIp": "10.160.32.16"
+}, {
+	"listSubnet": ["10.218.24.0/24"],
+	"bgpNeighborDescription": " BRMEX-SIERRA-1",
+	"uid": 15,
+	"bgpNeighborIp": "10.160.32.17"
+}, {
+	"listSubnet": ["10.218.18.129/32", "10.218.18.0/24"],
+	"bgpNeighborDescription": " BRMEX-GDAAEC-1",
+	"uid": 16,
+	"bgpNeighborIp": "10.160.32.18"
+}, {
+	"listSubnet": ["10.218.19.129/32", "10.218.19.0/24"],
+	"bgpNeighborDescription": " BRMEX-AGNAEC-1",
+	"uid": 17,
+	"bgpNeighborIp": "10.160.32.19"
+}, {
+	"listSubnet": ["10.218.45.0/24"],
+	"bgpNeighborDescription": " BRVEN-GUA-1-A",
+	"uid": 18,
+	"bgpNeighborIp": "10.160.32.20"
+}, {
+	"listSubnet": ["10.218.21.129/32", "10.218.21.0/24"],
+	"bgpNeighborDescription": " BRCOL-BGAAEC-1",
+	"uid": 19,
+	"bgpNeighborIp": "10.160.32.21"
+}, {
+	"listSubnet": ["10.218.22.129/32", "10.218.22.0/24"],
+	"bgpNeighborDescription": " BRMEX-TJAAEC-1",
+	"uid": 20,
+	"bgpNeighborIp": "10.160.32.22"
+}, {
+	"listSubnet": ["10.218.65.0/24"],
+	"bgpNeighborDescription": " BRMEX-SDLA-1",
+	"uid": 21,
+	"bgpNeighborIp": "10.160.32.23"
+}, {
+	"listSubnet": ["10.218.47.0/24"],
+	"bgpNeighborDescription": " BRGTM-WH-1-A",
+	"uid": 22,
+	"bgpNeighborIp": "10.160.32.25"
+}, {
+	"listSubnet": ["10.218.26.129/32", "10.218.26.0/24"],
+	"bgpNeighborDescription": " BRMEX-BUSAEC-1",
+	"uid": 23,
+	"bgpNeighborIp": "10.160.32.26"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRPAN-DHL-WHS-1",
+	"uid": 24,
+	"bgpNeighborIp": "10.160.32.27"
+}, {
+	"listSubnet": ["10.228.254.19/32", "10.228.254.18/32", "10.228.254.17/32", "10.228.254.16/32", "10.228.36.0/24", "10.228.34.0/24", "10.228.33.0/24", "10.228.32.0/24"],
+	"bgpNeighborDescription": " BRMEX-CDF-1",
+	"uid": 25,
+	"bgpNeighborIp": "10.160.32.28"
+}, {
+	"listSubnet": ["10.218.52.129/32", "10.218.52.0/24", "10.218.52.0/25"],
+	"bgpNeighborDescription": " BRCOL-TP-1",
+	"uid": 26,
+	"bgpNeighborIp": "10.160.32.29"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRTEX-DLS-1-A",
+	"uid": 27,
+	"bgpNeighborIp": "10.160.32.30"
+}, {
+	"listSubnet": ["10.218.49.129/32", "10.218.49.0/24"],
+	"bgpNeighborDescription": " BRMEX-MONPUC-1",
+	"uid": 28,
+	"bgpNeighborIp": "10.160.32.31"
+}, {
+	"listSubnet": ["10.218.32.0/24"],
+	"bgpNeighborDescription": " BRCRI-PZN-1",
+	"uid": 29,
+	"bgpNeighborIp": "10.160.32.32"
+}, {
+	"listSubnet": ["10.218.33.0/24"],
+	"bgpNeighborDescription": " BRGTM-CDG-1",
+	"uid": 30,
+	"bgpNeighborIp": "10.160.32.33"
+}, {
+	"listSubnet": ["10.218.226.1/32", "10.218.224.0/20"],
+	"bgpNeighborDescription": " BRBRA-ABG-1-A",
+	"uid": 31,
+	"bgpNeighborIp": "10.160.32.34"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRVEN-CARAEC-1",
+	"uid": 32,
+	"bgpNeighborIp": "10.160.32.35"
+}, {
+	"listSubnet": ["10.218.16.0/24"],
+	"bgpNeighborDescription": " BRMEX-MONAEC-1",
+	"uid": 33,
+	"bgpNeighborIp": "10.160.32.36"
+}, {
+	"listSubnet": ["10.218.2.0/24", "10.218.1.0/24", "10.218.0.0/24"],
+	"bgpNeighborDescription": " BRDOM-1-A",
+	"uid": 34,
+	"bgpNeighborIp": "10.160.32.37"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRBRA-RCE-1",
+	"uid": 35,
+	"bgpNeighborIp": "10.160.32.38"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRARG-ALA-1",
+	"uid": 36,
+	"bgpNeighborIp": "10.160.32.39"
+}, {
+	"listSubnet": ["10.218.54.129/32", "10.218.54.0/24", "10.218.54.0/25"],
+	"bgpNeighborDescription": " BRVEN-TP-1",
+	"uid": 37,
+	"bgpNeighborIp": "10.160.32.40"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRHND-DHLWHS-1",
+	"uid": 38,
+	"bgpNeighborIp": "10.160.32.41"
+}, {
+	"listSubnet": ["10.218.28.0/24"],
+	"bgpNeighborDescription": " BRBRA-SPAEC-1",
+	"uid": 39,
+	"bgpNeighborIp": "10.160.32.42"
+}, {
+	"listSubnet": ["10.218.25.0/24"],
+	"bgpNeighborDescription": " BRBRA-RDJAEC-1",
+	"uid": 40,
+	"bgpNeighborIp": "10.160.32.43"
+}, {
+	"listSubnet": ["10.218.2.0/24", "10.218.1.0/24", "10.218.0.0/24"],
+	"bgpNeighborDescription": " BRDOM-1-B",
+	"uid": 41,
+	"bgpNeighborIp": "10.160.32.44"
+}, {
+	"listSubnet": ["10.218.38.0/24"],
+	"bgpNeighborDescription": " BRARG-RSO-1",
+	"uid": 42,
+	"bgpNeighborIp": "10.160.32.45"
+}, {
+	"listSubnet": ["10.218.36.0/24"],
+	"bgpNeighborDescription": " BRCOL-KN-1",
+	"uid": 43,
+	"bgpNeighborIp": "10.160.32.46"
+}, {
+	"listSubnet": ["10.195.32.0/20"],
+	"bgpNeighborDescription": " BRCRI-EPC-1-B",
+	"uid": 44,
+	"bgpNeighborIp": "10.160.32.47"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRGRMI-MCPC-1",
+	"uid": 45,
+	"bgpNeighborIp": "10.160.32.48"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRGRMI-WH-1",
+	"uid": 46,
+	"bgpNeighborIp": "10.160.32.49"
+}, {
+	"listSubnet": ["10.195.114.0/24", "10.195.113.0/24", "10.195.112.0/24"],
+	"bgpNeighborDescription": " BRHC-SVA-VPN-1-A",
+	"uid": 47,
+	"bgpNeighborIp": "10.160.32.50"
+}, {
+	"listSubnet": ["10.218.42.0/24"],
+	"bgpNeighborDescription": " BRCOL-MEDAEC-1-A",
+	"uid": 48,
+	"bgpNeighborIp": "10.160.32.51"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRMI-CPR-1",
+	"uid": 49,
+	"bgpNeighborIp": "10.160.32.52"
+}, {
+	"listSubnet": ["10.218.44.129/32", "10.218.44.0/24", "10.218.44.0/25"],
+	"bgpNeighborDescription": " BRBRA-TP-1",
+	"uid": 50,
+	"bgpNeighborIp": "10.160.32.53"
+}, {
+	"listSubnet": ["10.218.50.129/32", "10.218.50.0/24"],
+	"bgpNeighborDescription": " BRMEX-DFPUC-1",
+	"uid": 51,
+	"bgpNeighborIp": "10.160.32.54"
+}, {
+	"listSubnet": ["10.218.51.129/32", "10.218.51.0/24"],
+	"bgpNeighborDescription": " BRBRA-CURPUC-1",
+	"uid": 52,
+	"bgpNeighborIp": "10.160.32.55"
+}, {
+	"listSubnet": ["10.218.56.129/32", "10.218.56.0/24"],
+	"bgpNeighborDescription": " BRMEX-CANPUC-1-A",
+	"uid": 53,
+	"bgpNeighborIp": "10.160.32.56"
+}, {
+	"listSubnet": ["10.218.55.129/32", "10.218.55.0/24"],
+	"bgpNeighborDescription": " BRMEX-IZPUC-1-A",
+	"uid": 54,
+	"bgpNeighborIp": "10.160.32.57"
+}, {
+	"listSubnet": ["10.215.3.1/32", "10.215.0.0/20"],
+	"bgpNeighborDescription": " BRS24-ECHO-LV-1-A",
+	"uid": 55,
+	"bgpNeighborIp": "10.160.32.58"
+}, {
+	"listSubnet": ["10.215.19.2/32", "10.215.16.0/20"],
+	"bgpNeighborDescription": " BRS24-DELTA-PM-1-B",
+	"uid": 56,
+	"bgpNeighborIp": "10.160.32.59"
+}, {
+	"listSubnet": ["10.218.60.129/32", "10.218.60.0/24"],
+	"bgpNeighborDescription": " BRMEX-LGPUC-1-A",
+	"uid": 57,
+	"bgpNeighborIp": "10.160.32.60"
+}, {
+	"listSubnet": ["10.215.0.0/20"],
+	"bgpNeighborDescription": " BRS24-ECHO-LV-1-B",
+	"uid": 58,
+	"bgpNeighborIp": "10.160.32.61"
+}, {
+	"listSubnet": ["10.218.58.129/32", "10.218.58.0/24"],
+	"bgpNeighborDescription": " BRMEX-CHIAEC-1",
+	"uid": 59,
+	"bgpNeighborIp": "10.160.32.62"
+}, {
+	"listSubnet": ["10.218.61.129/32", "10.218.61.0/24"],
+	"bgpNeighborDescription": " BRMEX-CULPUC-1-A",
+	"uid": 60,
+	"bgpNeighborIp": "10.160.32.63"
+}, {
+	"listSubnet": ["10.250.160.1/32", "10.250.160.0/19"],
+	"bgpNeighborDescription": " EUFIRT01",
+	"uid": 61,
+	"bgpNeighborIp": "10.160.32.64"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " EUNORT01",
+	"uid": 62,
+	"bgpNeighborIp": "10.160.32.65"
+}, {
+	"listSubnet": ["10.251.32.2/32", "10.251.32.0/20", "10.251.32.0/21", "10.251.0.0/16"],
+	"bgpNeighborDescription": " BRUKR-WHS-2",
+	"uid": 63,
+	"bgpNeighborIp": "10.160.32.66"
+}, {
+	"listSubnet": ["10.248.232.0/21"],
+	"bgpNeighborDescription": " EUGBRT11",
+	"uid": 64,
+	"bgpNeighborIp": "10.160.32.67"
+}, {
+	"listSubnet": ["0", "10.232.251.128/25", "10.232.251.0/25", "10.232.250.0/24", "10.232.249.0/24", "10.232.248.0/24", "10.232.247.0/24", "10.232.246.1/32", "10.232.246.0/24"],
+	"bgpNeighborDescription": " EUPLRT11",
+	"uid": 65,
+	"bgpNeighborIp": "10.160.32.68"
+}, {
+	"listSubnet": ["10.218.62.129/32", "10.218.62.0/24"],
+	"bgpNeighborDescription": " BRARG-ADR-1",
+	"uid": 66,
+	"bgpNeighborIp": "10.160.32.69"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRCHE-HQ-2",
+	"uid": 67,
+	"bgpNeighborIp": "10.160.32.70"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRHRV-HQ-1",
+	"uid": 68,
+	"bgpNeighborIp": "10.160.32.72"
+}, {
+	"listSubnet": ["0", "10.218.240.254/32", "10.218.240.0/24", "10.218.224.0/20"],
+	"bgpNeighborDescription": " BRBRA-ABG-1-A",
+	"uid": 69,
+	"bgpNeighborIp": "10.160.32.74"
+}, {
+	"listSubnet": ["10.235.160.0/21"],
+	"bgpNeighborDescription": " BRTUR-WHS-1",
+	"uid": 70,
+	"bgpNeighborIp": "10.160.32.75"
+}, {
+	"listSubnet": ["10.235.164.0/22", "10.235.160.0/21", "10.235.160.0/22"],
+	"bgpNeighborDescription": " BRTUR-WHS-2",
+	"uid": 71,
+	"bgpNeighborIp": "10.160.32.76"
+}, {
+	"listSubnet": ["10.245.200.1/32", "10.245.128.0/17", "10.245.0.0/16"],
+	"bgpNeighborDescription": " BRHUN-HQ-1",
+	"uid": 72,
+	"bgpNeighborIp": "10.160.32.77"
+}, {
+	"listSubnet": ["10.242.200.1/32", "10.242.128.0/17", "10.242.0.0/16"],
+	"bgpNeighborDescription": " BRROU-HQ-1",
+	"uid": 73,
+	"bgpNeighborIp": "10.160.32.78"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRSVK-HQ-1",
+	"uid": 74,
+	"bgpNeighborIp": "10.160.32.79"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRGBR-AEC-1",
+	"uid": 75,
+	"bgpNeighborIp": "10.160.32.82"
+}, {
+	"listSubnet": ["10.234.1.2/32", "10.234.0.0/21"],
+	"bgpNeighborDescription": " Greece-WHS-2",
+	"uid": 76,
+	"bgpNeighborIp": "10.160.32.83"
+}, {
+	"listSubnet": ["10.234.200.1/32", "10.234.0.0/16"],
+	"bgpNeighborDescription": " Greece-HQ-1",
+	"uid": 77,
+	"bgpNeighborIp": "10.160.32.84"
+}, {
+	"listSubnet": ["10.130.64.0/20", "10.130.63.0/25", "10.130.1.5/32", "10.130.0.0/16", "10.130.0.0/20"],
+	"bgpNeighborDescription": " BRAWS-FRA-1-A",
+	"uid": 78,
+	"bgpNeighborIp": "10.160.32.85"
+}, {
+	"listSubnet": ["10.250.192.0/19"],
+	"bgpNeighborDescription": " BRSWE-HQ-1",
+	"uid": 79,
+	"bgpNeighborIp": "10.160.32.86"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRSVN-HQ-1",
+	"uid": 80,
+	"bgpNeighborIp": "10.160.32.87"
+}, {
+	"listSubnet": ["10.237.200.1/32", "10.237.128.0/17", "10.237.0.0/16"],
+	"bgpNeighborDescription": " BRCZE-HQ-1",
+	"uid": 81,
+	"bgpNeighborIp": "10.160.32.88"
+}, {
+	"listSubnet": ["10.238.200.1/32", "10.238.128.0/17", "10.238.0.0/16", "10.238.0.0/17"],
+	"bgpNeighborDescription": " BRAUT-HQ-1",
+	"uid": 82,
+	"bgpNeighborIp": "10.160.32.89"
+}, {
+	"listSubnet": ["10.240.200.1/32", "10.240.128.0/17"],
+	"bgpNeighborDescription": " BRESP-HQ-1",
+	"uid": 83,
+	"bgpNeighborIp": "10.160.32.90"
+}, {
+	"listSubnet": ["10.247.200.1/32", "10.247.0.0/16"],
+	"bgpNeighborDescription": " BRITA-HQ-1",
+	"uid": 84,
+	"bgpNeighborIp": "10.160.32.91"
+}, {
+	"listSubnet": ["10.251.32.1/32", "10.251.32.0/20"],
+	"bgpNeighborDescription": " BRUKR-WHS-1",
+	"uid": 85,
+	"bgpNeighborIp": "10.160.32.94"
+}, {
+	"listSubnet": ["10.250.1.1/32", "10.250.0.0/18", "10.250.0.0/19"],
+	"bgpNeighborDescription": " BRDNK-HQ-1",
+	"uid": 86,
+	"bgpNeighborIp": "10.160.32.95"
+}, {
+	"listSubnet": ["10.241.64.1/32", "10.241.64.0/21", "10.241.64.0/22"],
+	"bgpNeighborDescription": " BRDEU-BER-1",
+	"uid": 87,
+	"bgpNeighborIp": "10.160.32.96"
+}, {
+	"listSubnet": ["10.241.64.2/32", "10.241.64.0/21"],
+	"bgpNeighborDescription": " BRDEU-BER-2",
+	"uid": 88,
+	"bgpNeighborIp": "10.160.32.97"
+}, {
+	"listSubnet": ["10.246.196.1/32", "10.246.196.0/22", "10.246.193.0/24", "10.246.192.2/32", "10.246.192.0/22", "10.246.65.0/24", "10.246.64.2/32", "10.246.64.0/19"],
+	"bgpNeighborDescription": " BRZAF-JBGABC-2",
+	"uid": 89,
+	"bgpNeighborIp": "10.160.32.99"
+}, {
+	"listSubnet": ["10.195.88.0/21"],
+	"bgpNeighborDescription": " BRPOL-WITEK-ATLAS-1",
+	"uid": 90,
+	"bgpNeighborIp": "10.160.32.100"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRKAZ-HQ-2",
+	"uid": 91,
+	"bgpNeighborIp": "10.160.32.101"
+}, {
+	"listSubnet": ["10.234.4.0/22", "10.234.0.0/21", "10.234.0.0/22"],
+	"bgpNeighborDescription": " Greece-WHS-1",
+	"uid": 92,
+	"bgpNeighborIp": "10.160.32.102"
+}, {
+	"listSubnet": ["10.241.72.1/32", "10.241.72.0/21", "10.241.72.0/22"],
+	"bgpNeighborDescription": " BRITA-ROM-1",
+	"uid": 93,
+	"bgpNeighborIp": "10.160.32.103"
+}, {
+	"listSubnet": ["10.241.72.2/32", "10.241.72.0/21"],
+	"bgpNeighborDescription": " BRITA-ROM-2",
+	"uid": 94,
+	"bgpNeighborIp": "10.160.32.104"
+}, {
+	"listSubnet": ["10.235.68.0/22"],
+	"bgpNeighborDescription": " BRTUR-ANK-1",
+	"uid": 95,
+	"bgpNeighborIp": "10.160.32.105"
+}, {
+	"listSubnet": ["10.235.70.0/23", "10.235.68.0/23"],
+	"bgpNeighborDescription": " BRTUR-ANK-2",
+	"uid": 96,
+	"bgpNeighborIp": "10.160.32.106"
+}, {
+	"listSubnet": ["10.246.1.6/32", "10.246.0.0/19"],
+	"bgpNeighborDescription": " BRZAF-CAP-1",
+	"uid": 97,
+	"bgpNeighborIp": "10.160.32.107"
+}, {
+	"listSubnet": ["10.241.80.1/32", "10.241.80.0/21", "10.241.80.0/22"],
+	"bgpNeighborDescription": " BRESP-MAD-1",
+	"uid": 98,
+	"bgpNeighborIp": "10.160.32.108"
+}, {
+	"listSubnet": ["10.241.80.2/32", "10.241.80.0/21"],
+	"bgpNeighborDescription": " BRESP-MAD-2",
+	"uid": 99,
+	"bgpNeighborIp": "10.160.32.109"
+}, {
+	"listSubnet": ["10.130.17.5/32", "10.130.16.0/20", "10.130.0.0/16"],
+	"bgpNeighborDescription": " BRAWS-FRA-1-B",
+	"uid": 100,
+	"bgpNeighborIp": "10.160.32.110"
+}, {
+	"listSubnet": ["10.248.236.0/22", "10.248.232.1/32", "10.248.232.0/21", "10.248.232.0/22"],
+	"bgpNeighborDescription": " BRGBR-AEC-1",
+	"uid": 101,
+	"bgpNeighborIp": "10.160.32.111"
+}, {
+	"listSubnet": ["10.195.160.0/20"],
+	"bgpNeighborDescription": " BRWA-DC-1-A",
+	"uid": 102,
+	"bgpNeighborIp": "10.160.32.112"
+}, {
+	"listSubnet": ["156160", "10.195.209.129/32", "10.195.208.0/20"],
+	"bgpNeighborDescription": " BRNY-NYC-1-A",
+	"uid": 103,
+	"bgpNeighborIp": "10.160.32.113"
+}, {
+	"listSubnet": ["10.128.191.0/24", "10.128.130.0/24", "10.128.128.5/32", "10.128.128.0/18"],
+	"bgpNeighborDescription": " BRAWS-SEA-TOKYO-A",
+	"uid": 104,
+	"bgpNeighborIp": "10.160.32.121"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRAWS-TOKYO-1-B",
+	"uid": 105,
+	"bgpNeighborIp": "10.160.32.122"
+}, {
+	"listSubnet": ["10.128.52.0/24", "10.128.51.0/24", "10.128.50.0/24", "10.128.46.0/23", "10.128.44.0/23", "10.128.38.0/23", "10.128.36.0/25", "10.128.35.0/25", "10.128.34.0/25", "10.128.33.0/25", "10.128.32.0/25", "10.128.2.0/24", "10.128.1.0/24", "10.128.0.5/32", "10.128.0.0/18"],
+	"bgpNeighborDescription": " AWS-SEA BRAWS-SEA-1-A",
+	"uid": 106,
+	"bgpNeighborIp": "10.160.32.128"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " AWS-SEA BRAWS-SEA-1-B",
+	"uid": 107,
+	"bgpNeighborIp": "10.160.32.129"
+}, {
+	"listSubnet": ["10.218.46.0/24"],
+	"bgpNeighborDescription": " BRCHL-WHS-1-A",
+	"uid": 108,
+	"bgpNeighborIp": "10.160.32.131"
+}, {
+	"listSubnet": ["10.218.8.129/32", "10.218.8.0/24"],
+	"bgpNeighborDescription": " SanSalvador_AEC",
+	"uid": 109,
+	"bgpNeighborIp": "10.160.32.133"
+}, {
+	"listSubnet": ["10.218.34.0/24"],
+	"bgpNeighborDescription": " BRCOL-CALAEC-1",
+	"uid": 110,
+	"bgpNeighborIp": "10.160.32.134"
+}, {
+	"listSubnet": ["10.218.208.0/20"],
+	"bgpNeighborDescription": " BRBRA-JUN-1-A",
+	"uid": 111,
+	"bgpNeighborIp": "10.160.32.135"
+}, {
+	"listSubnet": ["10.132.20.0/24", "10.132.20.0/25", "10.132.16.0/22", "10.132.16.0/23", "10.132.0.0/22", "10.132.0.0/23"],
+	"bgpNeighborDescription": " BRAWS-SA-AZa-57bd",
+	"uid": 112,
+	"bgpNeighborIp": "10.160.32.136"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRPRT-HQ-2",
+	"uid": 113,
+	"bgpNeighborIp": "10.160.32.137"
+}, {
+	"listSubnet": ["10.132.20.128/25", "10.132.20.0/24", "10.132.18.0/23", "10.132.16.0/22", "10.132.2.0/23", "10.132.0.0/22"],
+	"bgpNeighborDescription": " BRAWS-SA-AZc-3989",
+	"uid": 114,
+	"bgpNeighborIp": "10.160.32.138"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " EUHRRT02",
+	"uid": 115,
+	"bgpNeighborIp": "10.160.32.139"
+}, {
+	"listSubnet": ["10.143.249.0/30"],
+	"bgpNeighborDescription": " BRCHN-HQ-40-A",
+	"uid": 116,
+	"bgpNeighborIp": "10.160.32.140"
+}, {
+	"listSubnet": ["10.218.41.0/24"],
+	"bgpNeighborDescription": " BRDOM-SAN-1",
+	"uid": 117,
+	"bgpNeighborIp": "10.160.32.141"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRCHN-DR-1-A",
+	"uid": 118,
+	"bgpNeighborIp": "10.160.32.142"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRAWS-Lab-US-East-AZ1A-A",
+	"uid": 119,
+	"bgpNeighborIp": "10.160.32.150"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRAWS-Lab-US-East-AZ1B-B",
+	"uid": 120,
+	"bgpNeighborIp": "10.160.32.151"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRMYS-HQ1-3-B",
+	"uid": 121,
+	"bgpNeighborIp": "10.160.32.164"
+}, {
+	"listSubnet": ["10.252.248.0/22", "10.252.244.0/22", "10.252.144.0/22", "10.168.48.2/32", "10.168.48.0/20"],
+	"bgpNeighborDescription": " BRRUS-MOS-1-B",
+	"uid": 122,
+	"bgpNeighborIp": "10.160.32.166"
+}, {
+	"listSubnet": ["10.168.32.0/20"],
+	"bgpNeighborDescription": " Hungary-2",
+	"uid": 123,
+	"bgpNeighborIp": "10.160.32.167"
+}, {
+	"listSubnet": ["10.168.16.2/32", "10.168.16.0/20"],
+	"bgpNeighborDescription": " Poland-2",
+	"uid": 124,
+	"bgpNeighborIp": "10.160.32.168"
+}, {
+	"listSubnet": ["10.169.0.0/16"],
+	"bgpNeighborDescription": " Netherlands-2",
+	"uid": 125,
+	"bgpNeighborIp": "10.160.32.169"
+}, {
+	"listSubnet": ["10.170.162.3/32", "10.170.0.0/16"],
+	"bgpNeighborDescription": " BRIND-HQ-1-B",
+	"uid": 126,
+	"bgpNeighborIp": "10.160.32.170"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " India Contingency BRIND-CHEN-1-A",
+	"uid": 127,
+	"bgpNeighborIp": "10.160.32.171"
+}, {
+	"listSubnet": ["10.173.0.0/16", "10.172.0.0/16"],
+	"bgpNeighborDescription": " Japan-1",
+	"uid": 128,
+	"bgpNeighborIp": "10.160.32.172"
+}, {
+	"listSubnet": ["10.173.0.0/16", "10.172.0.0/16"],
+	"bgpNeighborDescription": " Japan-2",
+	"uid": 129,
+	"bgpNeighborIp": "10.160.32.173"
+}, {
+	"listSubnet": ["0", "10.170.222.252/32", "10.170.208.0/20"],
+	"bgpNeighborDescription": " BRIND-MFG-1-B",
+	"uid": 130,
+	"bgpNeighborIp": "10.160.32.175"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRTHA-VPN-2  - Contingency",
+	"uid": 131,
+	"bgpNeighborIp": "10.160.32.178"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRKOR-BAL-VPN-A - Contengency",
+	"uid": 132,
+	"bgpNeighborIp": "10.160.32.181"
+}, {
+	"listSubnet": ["10.182.0.2/32", "10.182.0.0/16", "10.179.0.0/16", "10.178.0.0/16", "10.177.0.0/16", "10.176.0.0/16"],
+	"bgpNeighborDescription": " BRTHA-HQ1-3-B",
+	"uid": 133,
+	"bgpNeighborIp": "10.160.32.182"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " Indonesia-2 ",
+	"uid": 134,
+	"bgpNeighborIp": "10.160.32.183"
+}, {
+	"listSubnet": ["10.185.32.2/32", "10.185.0.0/16"],
+	"bgpNeighborDescription": " BRPHL-HQ-1-B",
+	"uid": 135,
+	"bgpNeighborIp": "10.160.32.185"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " Australia-2",
+	"uid": 136,
+	"bgpNeighborIp": "10.160.32.186"
+}, {
+	"listSubnet": ["10.187.0.0/16", "10.181.128.2/32", "10.181.0.0/16", "10.149.0.0/16"],
+	"bgpNeighborDescription": " BRKOR-HQ-VPN-A",
+	"uid": 137,
+	"bgpNeighborIp": "10.160.32.187"
+}, {
+	"listSubnet": ["10.183.216.2/32", "10.183.0.0/16"],
+	"bgpNeighborDescription": " BRIDN-VPN-23-A",
+	"uid": 138,
+	"bgpNeighborIp": "10.160.32.188"
+}, {
+	"listSubnet": ["10.189.1.3/32", "10.189.0.0/16"],
+	"bgpNeighborDescription": " BRSGP-HQ-1-B",
+	"uid": 139,
+	"bgpNeighborIp": "10.160.32.189"
+}, {
+	"listSubnet": ["10.195.234.0/23"],
+	"bgpNeighborDescription": " BRWA-EASTMILL-1-A",
+	"uid": 140,
+	"bgpNeighborIp": "10.160.32.193"
+}, {
+	"listSubnet": ["0", "10.195.232.129/32", "10.195.232.0/24"],
+	"bgpNeighborDescription": " BRWA-EASTFARM-1-A",
+	"uid": 141,
+	"bgpNeighborIp": "10.160.32.194"
+}, {
+	"listSubnet": ["10.195.96.2/32", "10.195.96.0/20"],
+	"bgpNeighborDescription": " BRCA-SAN-1-B",
+	"uid": 142,
+	"bgpNeighborIp": "10.160.32.195"
+}, {
+	"listSubnet": ["10.195.16.2/32", "10.195.16.0/20"],
+	"bgpNeighborDescription": " BRMYS-ESSC-1-B",
+	"uid": 143,
+	"bgpNeighborIp": "10.160.32.196"
+}, {
+	"listSubnet": ["10.196.1.3/32", "10.196.0.0/16"],
+	"bgpNeighborDescription": " NewZealand-2",
+	"uid": 144,
+	"bgpNeighborIp": "10.160.32.197"
+}, {
+	"listSubnet": ["10.186.64.2/32", "10.186.0.0/16"],
+	"bgpNeighborDescription": " BRAUS-VPN-1-A",
+	"uid": 145,
+	"bgpNeighborIp": "10.160.32.198"
+}, {
+	"listSubnet": ["10.166.28.3/32", "10.166.0.0/16"],
+	"bgpNeighborDescription": " Vietnam-2",
+	"uid": 146,
+	"bgpNeighborIp": "10.160.32.206"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRVNM-MFG-1-C Contingency",
+	"uid": 147,
+	"bgpNeighborIp": "10.160.32.207"
+}, {
+	"listSubnet": ["10.166.160.2/32", "10.166.160.0/19"],
+	"bgpNeighborDescription": " BRVNM-MFG1-1-B",
+	"uid": 148,
+	"bgpNeighborIp": "10.160.32.208"
+}, {
+	"listSubnet": ["10.195.144.0/20"],
+	"bgpNeighborDescription": " NYC_Experience_Center",
+	"uid": 149,
+	"bgpNeighborIp": "10.160.32.210"
+}, {
+	"listSubnet": ["10.195.176.0/20"],
+	"bgpNeighborDescription": " BRWA-Quincy-1-B",
+	"uid": 150,
+	"bgpNeighborIp": "10.160.32.211"
+}, {
+	"listSubnet": ["10.212.0.0/16"],
+	"bgpNeighborDescription": " BRHI-1-B",
+	"uid": 151,
+	"bgpNeighborIp": "10.160.32.212"
+}, {
+	"listSubnet": ["10.216.254.3/32", "10.216.0.0/16"],
+	"bgpNeighborDescription": " PRI-HQ-2",
+	"uid": 152,
+	"bgpNeighborIp": "10.160.32.216"
+}, {
+	"listSubnet": ["10.217.0.0/16"],
+	"bgpNeighborDescription": " Georgia-1",
+	"uid": 153,
+	"bgpNeighborIp": "10.160.32.217"
+}, {
+	"listSubnet": ["10.219.1.3/32", "10.219.0.0/16"],
+	"bgpNeighborDescription": " Canada-2",
+	"uid": 154,
+	"bgpNeighborIp": "10.160.32.219"
+}, {
+	"listSubnet": ["10.220.0.0/16"],
+	"bgpNeighborDescription": " BuenaPark-2",
+	"uid": 155,
+	"bgpNeighborIp": "10.160.32.220"
+}, {
+	"listSubnet": ["10.195.230.3/32", "10.195.224.0/21"],
+	"bgpNeighborDescription": " BRWA-TLF-1-B",
+	"uid": 156,
+	"bgpNeighborIp": "10.160.32.221"
+}, {
+	"listSubnet": ["10.222.0.0/16"],
+	"bgpNeighborDescription": " Lakeview-2",
+	"uid": 157,
+	"bgpNeighborIp": "10.160.32.222"
+}, {
+	"listSubnet": ["10.224.0.0/16"],
+	"bgpNeighborDescription": " BRBRA-HQ-1",
+	"uid": 158,
+	"bgpNeighborIp": "10.160.32.224"
+}, {
+	"listSubnet": ["10.225.0.0/16"],
+	"bgpNeighborDescription": " BRCOL-HQ-1",
+	"uid": 159,
+	"bgpNeighborIp": "10.160.32.225"
+}, {
+	"listSubnet": ["10.218.39.0/24"],
+	"bgpNeighborDescription": " BRPAN-DAV-1",
+	"uid": 160,
+	"bgpNeighborIp": "10.160.32.226"
+}, {
+	"listSubnet": ["10.227.0.0/16"],
+	"bgpNeighborDescription": " BRARG-HQ-1",
+	"uid": 161,
+	"bgpNeighborIp": "10.160.32.227"
+}, {
+	"listSubnet": ["10.228.0.0/16"],
+	"bgpNeighborDescription": " BRMEX-HQ-2",
+	"uid": 162,
+	"bgpNeighborIp": "10.160.32.228"
+}, {
+	"listSubnet": ["10.218.10.129/32", "10.218.10.0/24"],
+	"bgpNeighborDescription": " BRCHL-HQ-1",
+	"uid": 163,
+	"bgpNeighborIp": "10.160.32.229"
+}, {
+	"listSubnet": ["10.218.9.0/24"],
+	"bgpNeighborDescription": " BRHND-HQ-1",
+	"uid": 164,
+	"bgpNeighborIp": "10.160.32.230"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRPOL-HQ-1",
+	"uid": 165,
+	"bgpNeighborIp": "10.160.32.232"
+}, {
+	"listSubnet": ["10.233.200.2/32", "10.233.128.0/17", "10.233.0.0/16", "10.233.0.0/17"],
+	"bgpNeighborDescription": " EUPLRT02",
+	"uid": 166,
+	"bgpNeighborIp": "10.160.32.233"
+}, {
+	"listSubnet": ["10.234.200.2/32", "10.234.128.0/17", "10.234.0.0/16"],
+	"bgpNeighborDescription": " EUGRRT02",
+	"uid": 167,
+	"bgpNeighborIp": "10.160.32.234"
+}, {
+	"listSubnet": ["10.235.192.0/18"],
+	"bgpNeighborDescription": " EUTRRT02",
+	"uid": 168,
+	"bgpNeighborIp": "10.160.32.235"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " EUSKRT02",
+	"uid": 169,
+	"bgpNeighborIp": "10.160.32.236"
+}, {
+	"listSubnet": ["10.237.200.2/32", "10.237.0.0/16"],
+	"bgpNeighborDescription": " Czech",
+	"uid": 170,
+	"bgpNeighborIp": "10.160.32.237"
+}, {
+	"listSubnet": ["10.238.0.0/16"],
+	"bgpNeighborDescription": " EUATRT02",
+	"uid": 171,
+	"bgpNeighborIp": "10.160.32.238"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " EUSIRT02",
+	"uid": 172,
+	"bgpNeighborIp": "10.160.32.239"
+}, {
+	"listSubnet": ["10.240.200.2/32", "10.240.128.0/17"],
+	"bgpNeighborDescription": " EUESRT02",
+	"uid": 173,
+	"bgpNeighborIp": "10.160.32.240"
+}, {
+	"listSubnet": ["10.242.200.2/32", "10.242.0.0/16"],
+	"bgpNeighborDescription": " EURORT02",
+	"uid": 174,
+	"bgpNeighborIp": "10.160.32.242"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " EUCHRT02",
+	"uid": 175,
+	"bgpNeighborIp": "10.160.32.244"
+}, {
+	"listSubnet": ["10.245.200.2/32", "10.245.0.0/16"],
+	"bgpNeighborDescription": " EUHURT02",
+	"uid": 176,
+	"bgpNeighborIp": "10.160.32.245"
+}, {
+	"listSubnet": ["10.246.196.1/32", "10.246.196.0/22", "10.246.193.0/24", "10.246.192.2/32", "10.246.192.0/22", "10.246.2.0/24", "10.246.1.5/32", "10.246.0.0/19"],
+	"bgpNeighborDescription": " BRZAF-CAP-1-B",
+	"uid": 177,
+	"bgpNeighborIp": "10.160.32.246"
+}, {
+	"listSubnet": ["10.247.200.2/32", "10.247.128.0/17", "10.247.0.0/16"],
+	"bgpNeighborDescription": " EUITRT02",
+	"uid": 178,
+	"bgpNeighborIp": "10.160.32.247"
+}, {
+	"listSubnet": ["10.248.200.2/32", "10.248.0.0/16"],
+	"bgpNeighborDescription": " EUGBRT02",
+	"uid": 179,
+	"bgpNeighborIp": "10.160.32.248"
+}, {
+	"listSubnet": ["10.248.200.1/32", "10.248.0.0/16"],
+	"bgpNeighborDescription": " BRGBR-HQ-1",
+	"uid": 180,
+	"bgpNeighborIp": "10.160.32.249"
+}, {
+	"listSubnet": ["10.250.1.2/32", "10.250.0.0/18"],
+	"bgpNeighborDescription": " EUDKRT02",
+	"uid": 181,
+	"bgpNeighborIp": "10.160.32.250"
+}, {
+	"listSubnet": ["10.251.128.0/17", "10.251.1.2/32", "10.251.0.0/16", "10.251.0.0/17"],
+	"bgpNeighborDescription": " BRUKR-HQ-2",
+	"uid": 182,
+	"bgpNeighborIp": "10.160.32.251"
+}, {
+	"listSubnet": ["10.253.130.0/23", "10.253.128.2/32", "10.253.128.1/32", "10.253.128.0/17", "10.253.128.0/22", "10.253.128.0/23", "10.252.248.2/32", "10.252.244.1/32", "10.252.236.2/32", "10.252.236.1/32", "10.252.236.0/22", "10.252.232.0/22", "10.252.224.2/32", "10.252.224.0/22", "10.252.204.2/32", "10.252.204.0/22", "10.252.200.0/24", "10.252.196.2/32", "10.252.196.0/22", "10.252.176.1/32", "10.252.176.0/22", "10.252.160.2/32", "10.252.160.0/22", "10.252.144.2/32", "10.252.128.2/32", "10.252.128.0/22", "10.252.112.2/32", "10.252.112.0/22", "10.252.96.2/32", "10.252.96.0/22", "10.252.80.2/32", "10.252.80.0/22", "10.252.72.2/32", "10.252.72.0/22", "10.252.64.2/32", "10.252.64.0/22", "10.252.56.2/32", "10.252.56.0/22", "10.252.48.2/32", "10.252.48.0/22", "10.252.44.0/22", "10.252.40.1/32", "10.252.40.0/22", "10.252.32.0/21", "10.252.16.1/32", "10.252.0.0/16", "10.252.0.0/19", "10.168.64.0/18"],
+	"bgpNeighborDescription": " EURURT02",
+	"uid": 183,
+	"bgpNeighborIp": "10.160.32.252"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRKAZ-HQ-1",
+	"uid": 184,
+	"bgpNeighborIp": "10.160.32.253"
+}, {
+	"listSubnet": ["10.188.1.2/32", "10.188.0.0/16", "10.184.1.3/32", "10.184.0.0/16", "10.175.0.0/16", "10.174.0.0/16", "10.164.0.0/16"],
+	"bgpNeighborDescription": " Cyberjaya-2",
+	"uid": 185,
+	"bgpNeighborIp": "10.161.184.2"
+}, {
+	"listSubnet": ["10.194.1.3/32", "10.194.1.2/32", "10.194.0.0/16", "10.174.0.0/16", "10.165.0.0/16"],
+	"bgpNeighborDescription": " BRMYS-J33-WAN-9-A",
+	"uid": 186,
+	"bgpNeighborIp": "10.161.194.2"
+}, {
+	"listSubnet": ["10.242.1.2/32", "10.242.1.1/32", "10.242.0.0/22", "10.235.64.2/32", "10.235.64.1/32", "10.235.64.0/22", "10.195.80.0/21", "10.195.78.0/24", "10.195.64.0/20"],
+	"bgpNeighborDescription": " BRPOL-SC-2",
+	"uid": 187,
+	"bgpNeighborIp": "10.161.195.18"
+}, {
+	"listSubnet": ["10.250.192.0/19", "10.247.2.0/24", "10.247.1.1/32", "10.242.1.2/32", "10.242.1.1/32", "10.242.0.0/22", "10.236.0.0/16", "10.235.64.2/32", "10.235.64.1/32", "10.235.64.0/22", "10.232.20.0/24", "10.232.0.0/16", "10.200.1.2/32", "10.200.0.0/16"],
+	"bgpNeighborDescription": " BRDEU-DC-2",
+	"uid": 188,
+	"bgpNeighborIp": "10.161.200.2"
+}, {
+	"listSubnet": [],
+	"bgpNeighborDescription": " BRDEU-HQ-2",
+	"uid": 189,
+	"bgpNeighborIp": "10.161.232.2"
+}]

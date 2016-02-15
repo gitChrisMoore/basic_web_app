@@ -1,0 +1,17 @@
+{
+	"device1": {
+		"ipaddress": "192.168.1.1/32"
+	},
+	  "device2": {
+		"ipaddress": "10.0.1.1/32"
+	},
+	  "device3": {
+		"ipaddress": "10.0.1.1/24"
+	},
+	  "device4": {
+		"ipaddress": "10.0.1.1/25"
+	},
+	  "device5": {
+		"ipaddress": "10.0.1.1/16"
+	}
+}
