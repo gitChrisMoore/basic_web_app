@@ -20,9 +20,24 @@ module.exports = function (req, res) {
 
 	var deviceip = require(deviceIpFilePathRead);
 
-	console.log(deviceip.device1)
+	//console.log(deviceip.device1)
 
 	console.log('objectload: deviceip status: end')
+
+	// step 1 - load ip address from devices
+	// load ip address json from assets
+	//
+	console.log('objectload: deviceip status: start')
+
+	var deviceListPath = '/assets/device.json'
+	var deviceListPathRead = path.join(__dirname, '../', deviceListPath)
+
+	var deviceList = require(deviceListPathRead);
+
+	//console.log(deviceList)
+
+	console.log('objectload: deviceip status: end')
+
 
 
 	// step 2 - load ip address from routelist.json
@@ -49,7 +64,7 @@ module.exports = function (req, res) {
 
 	var routersubnet = require(routersubnetFilePathRead);
 
-	console.log(routersubnet[21])
+	//console.log(routersubnet[21])
 
 	console.log('objectload: routersubnet status: end')
 
@@ -90,7 +105,7 @@ module.exports = function (req, res) {
 		resultObject.ip = stringArray[0]
 		resultObject.mask = stringArray[1]
 
-		console.log(resultObject.mask)
+		//console.log(resultObject.mask)
 
 		return resultObject
 	}
@@ -123,12 +138,12 @@ module.exports = function (req, res) {
 
 				tmpObject.description = routersubnet[prop].listSubnet[listSubnetIteration]
 
-				console.log(routersubnet[prop].listSubnet[listSubnetIteration])
+				//console.log(routersubnet[prop].listSubnet[listSubnetIteration])
 
 				tmpObject = prefixToIPAdress(tmpObject.description)
 
 
-				console.log(tmpObject)
+				//console.log(tmpObject)
 
 				newListObject.push(tmpObject)
 
@@ -146,10 +161,11 @@ module.exports = function (req, res) {
 
 
 	newListObjectlen = newListObject.length;
+	deviceListlen = deviceList.length
 
 	for (j=0; j<newListObjectlen; ++j) {
 		if (newListObject[j].hasOwnProperty('mask')) {
-			console.log(typeof(newListObject[j].mask))
+			//console.log(typeof(newListObject[j].mask))
 		}
 
 	}
@@ -167,7 +183,7 @@ module.exports = function (req, res) {
 
 					//console.log(newListObject[j])
 
-					console.log(inSubnet.Auto(newListObject[j].ip, initialPrefx.original))
+					//console.log(inSubnet.Auto(newListObject[j].ip, initialPrefx.original))
 
 
 
@@ -187,8 +203,30 @@ module.exports = function (req, res) {
 		k--
 
 		for (j=0; j<newListObjectlen; ++j) {
+			//console.log(deviceListlen)
 
 			if (newListObject[j].hasOwnProperty('mask')) {
+
+				//newListObject[j].arr = {}
+
+
+								for (p=0; p<deviceListlen; ++p) {
+									//console.log('ya finally hit' + p)
+									if (!deviceList[p].hasOwnProperty('allocated')) {
+										if (inSubnet.Auto(deviceList[p].node, newListObject[j].original)) {
+
+											newListObject[j][deviceList[p].node] = deviceList[p]
+
+											deviceList[p].allocated = 'yes'
+
+										}
+
+
+									}
+
+
+								}
+
 
 				if (newListObject[j].mask == i) {
 
@@ -200,7 +238,7 @@ module.exports = function (req, res) {
 
 								if (inSubnet.Auto(newListObject[j].ip, newListObject[l].original)) {
 
-									console.log(inSubnet.Auto(newListObject[j].ip, newListObject[l].original))
+									//console.log(inSubnet.Auto(newListObject[j].ip, newListObject[l].original))
 
 
 									newListObject[l].subordinate = newListObject[j]
@@ -208,15 +246,23 @@ module.exports = function (req, res) {
 									newListObject[j].cleanup = 'yes'
 
 
-
-
 								}
+
+
 
 
 
 							}
 
+
+
+
+
 						}
+
+
+//
+
 
 
 
@@ -252,10 +298,16 @@ module.exports = function (req, res) {
 
 	console.log('start object')
 
-	console.log(JSON.stringify(secondObjectList))
-	console.log(secondObjectList.length)
-	console.log(newListObject.length)
+	//console.log(JSON.stringify(secondObjectList))
+	//console.log(secondObjectList.length)
+	//console.log(newListObject.length)
 
+	fs.writeFileSync('./data.json', JSON.stringify(secondObjectList));
+
+	fs.writeFile('helloworld.txt', JSON.stringify(secondObjectList), function (err) {
+	  if (err) return console.log(err);
+	  console.log('Hello World > helloworld.txt');
+	});
 
 	console.log('parserip: end')
 	return deferred.promise;
