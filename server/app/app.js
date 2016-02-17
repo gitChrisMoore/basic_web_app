@@ -1,41 +1,53 @@
 /**
- * Main application file
+ * Primary application file to start the server
+ * 
  */
 
 'use strict';
 
+/**
+* Global Requirements
+*
+* Setup and define server configuration
+*/
 var express = require('express');
-var mongoose = require('mongoose');
-
-// require config, not worrying about what environment is being loaded
-
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
-var config = require("./config/env/" + process.env.NODE_ENV);
-
-// Setup server
 var app = express();
 var server = require('http').createServer(app);
+
+/**
+* NPM Requirements
+* 
+*/
+var mongoose = require('mongoose');
+
+/**
+* Local Requirements
+*
+* Setup and define server configuration
+* Expect a variable to be passed, if not use development
+*/ 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var config = require("./config/env/" + process.env.NODE_ENV);
 require('./config/config')(app);
 require('./routes')(app);
 
-// try to connect to the mongo database
-// if the database cannot be connected
-// exit the application
+/**
+* Server Initialization
+*
+* This will try to connect to the mongo database from the
+* configuration file, if the mongo database cannot be connected
+* it will throw a error and stop
+*/ 
 
-// if the mongo connection fails
-
-console.log('Trying to connect to the following MongoDB Instance: ' + config.mongo.uri)
 mongoose.connect(config.mongo.uri)
 mongoose.connection.on('error', function(err) {
   console.log("Error while connecting to MongoDB:  " + err);
   process.exit();
 });
 
-
+// check to see if the server is connected
 mongoose.connection.on('connected', function(err) {
-  console.log('mongoose is now connected');
-  // start app here
+  // server can successfully connect to the mongo database
   server.listen(config.port, config.ip, function () {
    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
   });
