@@ -29,7 +29,11 @@ var controller = {
 			json: true,
 			body: postObjectJson
 		}, function (error, result, body) {
-			deferred.resolve(body)
+			
+			// Format response to JSON
+			var resultJSON = {body: body}
+
+			deferred.resolve(resultJSON)
 		})
 
 

@@ -107,11 +107,11 @@ module.exports = function(app) {
     logger.info(filename, 'START: POST /operations/:vendor/:command')
 
     cisco.postCommand(req, res)
-        .then(function (result) {
+        .then(function (resultJSON) {
           // return to the client a json result file from the query
           logger.info(filename, 'SUCCESS: POST /operations/:vendor/:command')
-          console.log(result)
-          res.status(202).json(result)
+          console.log(resultJSON)
+          res.status(202).json(resultJSON)
         })
         .catch(next);
   });
