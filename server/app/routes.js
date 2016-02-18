@@ -28,8 +28,9 @@ var parserip = require('./middleware/v1/parserip');
 var ver1 = '/api/v1';
 var filename = 'routes.js';
 var logger = require('./middleware/v1/loggerService');
-var filename = 'routes.js'
-var mongoService = require('./middleware/v1/mongoService')
+var filename = 'routes.js';
+var mongoService = require('./middleware/v1/mongoService');
+var cisco = require('./api/v1/cisco/singleCommands');
 /**
 * Export all of the valid routes
 *
@@ -101,9 +102,23 @@ module.exports = function(app) {
         .catch(next);
   });
 
+  app.post(ver1 + '/operations/:vendor/:command', function (req, res, next) {
+    // Check and see if the path has a model that exists
+    logger.info(filename, 'START: POST /operations/:vendor/:command')
+
+    cisco.postCommand(req, res)
+        .then(function (result) {
+          // return to the client a json result file from the query
+          logger.info(filename, 'SUCCESS: POST /operations/:vendor/:command')
+          console.log(result)
+          res.status(202).json(result)
+        })
+        .catch(next);
+  });
+
   app.patch(ver1 + '/:database/:collection/:id', function (req, res, next) {
     // Check and see if the path has a model that exists
-    logger.info(filename, 'START: PATCH /:database/:collection/')
+    logger.info(filename, 'START: PATCH /:database/:collection/:id')
     checkpathvalid(req, res)
         .then(function (isPathValid) {
           // Use the parser function to determine what/if there needs to be a query
@@ -115,8 +130,28 @@ module.exports = function(app) {
         })
         .then(function (result) {
           // return to the client a json result file from the query
-          logger.info(filename, 'SUCCESS: PATCH /:database/:collection/')
+          logger.info(filename, 'SUCCESS: PATCH /:database/:collection/:id')
           res.status(202).json(result)
+        })
+        .catch(next);
+  });
+
+  app.delete(ver1 + '/:database/:collection/:id', function (req, res, next) {
+    // Check and see if the path has a model that exists
+    logger.info(filename, 'START: DELETE /:database/:collection/:id')
+    checkpathvalid(req, res)
+        .then(function (isPathValid) {
+          // Use the parser function to determine what/if there needs to be a query
+          return parser(req, res)
+        })
+        .then(function (query) {
+          // Query the mongo database with the query field
+          return mongoService.destroy(req, res, query)
+        })
+        .then(function (result) {
+          // return to the client a json result file from the query
+          logger.info(filename, 'SUCCESS: DELETE /:database/:collection/:id')
+          res.status(204).json(result)
         })
         .catch(next);
   });

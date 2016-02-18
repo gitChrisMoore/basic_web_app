@@ -124,6 +124,44 @@ var controller = {
 		return deferred.promise;
 	},
 
+	destroy: function (req, res) {
+		log.info(filename, 'START: DESTROY')
+
+		var deferred = Q.defer();
+
+		var tempPath = ver1 + '/' +  req.params.database + '/' +  req.params.collection + '.model.js';
+		var newPath = path.join(__dirname, '../../', tempPath)
+
+		var collection = require(newPath)
+
+
+		var itemId = req.params.id;
+
+
+
+		collection.findById(itemId, function (err, result) {
+			if (err) {
+				return log.info(err);
+			}
+			if (!result) {
+				return deferred.reject()
+			}
+
+			log.info(filename, 'FOUND ' + result + ' and starting to DESTROY')
+
+			result.remove(function (err) {
+				if (err) {
+					log.info(err)
+					return deferred.reject()
+				}
+				log.info(filename, 'SUCCESS: DESTROY')
+				deferred.resolve(result)
+			})
+		})
+
+		return deferred.promise;
+	},
+
 
 }
 

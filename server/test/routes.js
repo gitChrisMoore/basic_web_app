@@ -11,26 +11,7 @@ var testID = ''
 
 
     // get users
-    describe('GET: ' + ver1 + '/amwayio/circuits/ ', function() {
-
-      it('This should return an array of objects', function(done) {
-        agent
-        .get(ver1 + '/amwayio/circuits/')
-        .expect(200)
-        .expect('Content-Type', /json/)
-        .end(function(err, res) {
-          if (err) return done(err);
-          res.should.have.property('status', 200)
-          res.body.should.be.a('array');
-          done();
-        });
-      });
-    
-    });
-
-
-    // get users
-    describe('Post: ' + ver1 + '/amwayio/circuits/ ', function() {
+    describe(ver1 + '/amwayio/circuits/ ' + 'CRUD Mongo Testing: ', function() {
 
       it('This should create a blank object and return the object _id', function(done) {
         var object = {}
@@ -46,18 +27,11 @@ var testID = ''
           //res.body.should.be.a('array');
           testID = res.body._id
           done();
+          console.log(testID)
         });
-      });
-    
-    });
+      }),
 
-    // get users
-
-    var buildString = 'find?string={"_id":"' + testID  +'"}'
-
-    describe('GET: ' + ver1 + '/amwayio/circuits/' + buildString, function() {
-
-      it('This should return a single object from the previous get', function(done) {
+      it('This should return an array of objects', function(done) {
         agent
         .get(ver1 + '/amwayio/circuits/')
         .expect(200)
@@ -68,6 +42,40 @@ var testID = ''
           res.body.should.be.a('array');
           done();
         });
-      });
-    
-    });
+      }),
+
+      it('This should return a single object in a array from the previous get', function(done) {
+        console.log('This is outside the testing' + testID)
+
+        var buildString = 'find?string={"_id":"' + testID  +'"}'
+
+        agent
+        .get(ver1 + '/amwayio/circuits/' + buildString)
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .end(function(err, res) {
+          if (err) return done(err);
+          res.should.have.property('status', 200)
+          res.body.should.be.a('array');
+          done();
+        });
+      }),
+
+
+      it('This should delete the object which was created in the previous tests', function(done) {
+        
+        var buildString = 'find?string={"_id":"' + testID  +'"}'
+
+        agent
+        .delete(ver1 + '/amwayio/circuits/' + testID)
+        .expect(204)
+        //.expect('Content-Type', /json/)
+        .end(function(err, res) {
+          if (err) return done(err);
+          res.should.have.property('status', 204)
+          //res.body.should.be.a('array');
+          testID = res.body._id
+          done();
+        })
+      })
+    })
