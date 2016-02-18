@@ -16,8 +16,13 @@ var controller = {
 		var deferred = Q.defer();
 
 		var requestURL = 'http://172.30.53.201:5000/' + req.params.vendor + '/' + req.params.command + '/'
-		var postObjectJson = {"switch": "10.226.130.3"}
 		
+		var postObjectJson = {}
+
+		if (req.body.hasOwnProperty('switch')) {
+			postObjectJson["switch"] = req.body.switch
+		};
+
 		request({
 			url: requestURL,
 			method: "POST",
