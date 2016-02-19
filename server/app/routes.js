@@ -25,6 +25,7 @@ var logger = require('./middleware/v1/loggerService');
 var filename = 'routes.js';
 var mongoService = require('./middleware/v1/mongoService');
 var cisco = require('./api/v1/cisco/singleCommands');
+var auth = require('./middleware/v1/authController');
 /**
 * Export all of the valid routes
 *
@@ -35,6 +36,62 @@ var cisco = require('./api/v1/cisco/singleCommands');
 */
 
 module.exports = function(app) {
+
+
+  app.get('/auth', function (req, res, next) {
+    // Check and see if the path has a model that exists
+    logger.info(filename, 'START: GET /auth');
+
+    auth.index(req, res)
+        .then(function (resultJSON) {
+          // return to the client a json result file from the query
+          logger.info(filename, 'SUCCESS: GET /auth');
+          res.status(200).sendFile(__dirname + '/views/login.html');
+        })
+        .catch(next);
+  });
+
+  app.post('/auth', function (req, res, next) {
+    // Check and see if the path has a model that exists
+    logger.info(filename, 'START: POST /auth');
+
+    auth.auth(req, res)
+        .then(function (resultJSONa) {
+          // return to the client a json result file from the query
+          logger.info(filename, 'SUCCESS: POST /auth');
+          console.log(resultJSONa);
+          res.status(200);
+        })
+        .catch(next);
+  });
+
+  app.get('/auth/getgroups', function (req, res, next) {
+    // Check and see if the path has a model that exists
+    logger.info(filename, 'START: GET /auth');
+
+    cisco.postCommand(req, res)
+        .then(function (resultJSON) {
+          // return to the client a json result file from the query
+          logger.info(filename, 'SUCCESS: GET /auth');
+          console.log(resultJSON);
+          res.status(202).json(resultJSON);
+        })
+        .catch(next);
+  });
+
+  app.get('/auth/session', function (req, res, next) {
+    // Check and see if the path has a model that exists
+    logger.info(filename, 'START: GET /auth');
+
+    cisco.postCommand(req, res)
+        .then(function (resultJSON) {
+          // return to the client a json result file from the query
+          logger.info(filename, 'SUCCESS: GET /auth');
+          console.log(resultJSON);
+          res.status(202).json(resultJSON);
+        })
+        .catch(next);
+  });
 
   app.get(ver1 + '/:database/:collection/:action', function (req, res, next) {
     // Check and see if the path has a model that exists
