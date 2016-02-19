@@ -1,16 +1,12 @@
-/**
- * mongoService.js
- * 
- */
-
-'use strict';
+/*jslint node: true */
+"use strict";
 
 /**
 * Global Requirements
 *
 */
 var fs = require('fs');
-var path = require("path")
+var path = require("path");
 
 /**
 * NPM Requirements
@@ -38,58 +34,58 @@ var log = bunyan.createLogger({name: "myapp"});
 var controller = {
 
 	find: function (req, res, query) {
-		log.info(filename, 'START: find')
+		log.info(filename, 'START: find');
 
 		var deferred = Q.defer();
 
 		var tempPath = ver1 + '/' +  req.params.database + '/' +  req.params.collection + '.model.js';
-		var newPath = path.join(__dirname, '../../', tempPath)
+		var newPath = path.join(__dirname, '../../', tempPath);
 
-		var collection = require(newPath)
+		var collection = require(newPath);
 
 		collection.find(query)
 		.exec(function (err, result) {
 			if (err) {
-				log.info(filename, err)
-				deferred.reject()
+				log.info(filename, err);
+				deferred.reject();
 			}
-			log.info(filename, 'SUCCESS: FIND')
-			deferred.resolve(result)
+			log.info(filename, 'SUCCESS: FIND');
+			deferred.resolve(result);
 		});
 		return deferred.promise;
 	},
 
 	create: function (req, res) {
-		log.info(filename, 'START: find')
+		log.info(filename, 'START: find');
 
 		var deferred = Q.defer();
 
 		var tempPath = ver1 + '/' +  req.params.database + '/' +  req.params.collection + '.model.js';
-		var newPath = path.join(__dirname, '../../', tempPath)
+		var newPath = path.join(__dirname, '../../', tempPath);
 
-		var collection = require(newPath)
+		var collection = require(newPath);
 
 		collection.create(req.body, function (err, result) {
 			if (err){
-				log.info(filename, err)
-				deferred.reject()
+				log.info(filename, err);
+				deferred.reject();
 			}
-			log.info(filename, 'SUCCESS: FIND')
-			deferred.resolve(result)
-		})
-
+			log.info(filename, 'SUCCESS: FIND');
+			deferred.resolve(result);
+		});
 		return deferred.promise;
+
 	},
 
 	update: function (req, res) {
-		log.info(filename, 'START: UPDATE')
+		log.info(filename, 'START: UPDATE');
 
 		var deferred = Q.defer();
 
 		var tempPath = ver1 + '/' +  req.params.database + '/' +  req.params.collection + '.model.js';
-		var newPath = path.join(__dirname, '../../', tempPath)
+		var newPath = path.join(__dirname, '../../', tempPath);
 
-		var collection = require(newPath)
+		var collection = require(newPath);
 
 		if (req.body._id) {
 			delete req.body._id;
@@ -104,35 +100,35 @@ var controller = {
 				return log.info(err);
 			}
 			if (!resultSingleItem) {
-				return deferred.reject()
+				return deferred.reject();
 			}
 
-			var itemAttributes = req.body
+			var itemAttributes = req.body;
 
-			var updatedItem = _.merge(resultSingleItem, itemAttributes)
+			var updatedItem = _.merge(resultSingleItem, itemAttributes);
 
 			updatedItem.save (function (err) {
 				if (err) {
-					log.info(err)
-					return deferred.reject()
+					log.info(err);
+					return deferred.reject();
 				}
-				log.info(filename, 'SUCCESS: UPDATE')
-				deferred.resolve(resultSingleItem)
-			})
-		})
+				log.info(filename, 'SUCCESS: UPDATE');
+				deferred.resolve(resultSingleItem);
+			});
+		});
 
 		return deferred.promise;
 	},
 
 	destroy: function (req, res) {
-		log.info(filename, 'START: DESTROY')
+		log.info(filename, 'START: DESTROY');
 
 		var deferred = Q.defer();
 
 		var tempPath = ver1 + '/' +  req.params.database + '/' +  req.params.collection + '.model.js';
-		var newPath = path.join(__dirname, '../../', tempPath)
+		var newPath = path.join(__dirname, '../../', tempPath);
 
-		var collection = require(newPath)
+		var collection = require(newPath);
 
 
 		var itemId = req.params.id;
@@ -144,25 +140,25 @@ var controller = {
 				return log.info(err);
 			}
 			if (!result) {
-				return deferred.reject()
+				return deferred.reject();
 			}
 
-			log.info(filename, 'FOUND ' + result + ' and starting to DESTROY')
+			log.info(filename, 'FOUND ' + result + ' and starting to DESTROY');
 
 			result.remove(function (err) {
 				if (err) {
-					log.info(err)
-					return deferred.reject()
+					log.info(err);
+					return deferred.reject();
 				}
-				log.info(filename, 'SUCCESS: DESTROY')
-				deferred.resolve(result)
-			})
-		})
+				log.info(filename, 'SUCCESS: DESTROY');
+				deferred.resolve(result);
+			});
+		});
 
 		return deferred.promise;
 	},
 
 
-}
+};
 
-module.exports = exports = controller
+module.exports = exports = controller;

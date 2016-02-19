@@ -1,9 +1,5 @@
-/**
- * checkpathvalid.js
- * 
- */
-
-'use strict';
+/*jslint node: true */
+"use strict";
 
 /**
 * Global Requirements
@@ -41,30 +37,30 @@ var ver1 = '/api/v1';
 module.exports = function (req, res) {
 	var deferred = Q.defer();
 
-	console.log('starting the function checkpathvalid')
+	console.log('starting the function checkpathvalid');
 
 
   // Build the temporary path
 
 	var tempPath = ver1 + '/' +  req.params.database + '/' +  req.params.collection + '.model.js';
-  var newPath = path.join(__dirname, '../../', tempPath)
+  var newPath = path.join(__dirname, '../../', tempPath);
 
 
-	console.log('The temporary path is: ' + newPath)
+	console.log('The temporary path is: ' + newPath);
 
-  var ispathvalid = 'true'
+  var ispathvalid = 'true';
 
   // return a pomise based on whether or not the path is valid
   
   if(fs.existsSync(newPath))
   {
-    console.log('promise - resolved')
-    deferred.resolve(ispathvalid)
+    console.log('promise - resolved');
+    deferred.resolve(ispathvalid);
   }
   else
   {
-    console.log('promise - deferred')
-    deferred.reject()
+    console.log('promise - deferred');
+    deferred.reject();
   }
 
 	return deferred.promise;

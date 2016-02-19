@@ -1,5 +1,5 @@
-
-'use strict';
+/*jslint node: true */
+"use strict";
 
 var express = require('express');
 var favicon = require('serve-favicon');
@@ -15,7 +15,7 @@ var path = require('path');
 
 module.exports = function(app) {
   var env = app.get('env');
-  var root = path.normalize(__dirname + '/../../..') 
+  var root = path.normalize(__dirname + '/../../..');
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
   app.use(compression());
@@ -31,7 +31,7 @@ module.exports = function(app) {
   }
 
   if ('development' === env || 'test' === env) {
-  	console.log('development')
+  	console.log('development');
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(root, '.tmp')));
     app.use(express.static(path.join(root, 'client')));

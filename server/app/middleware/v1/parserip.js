@@ -1,86 +1,89 @@
+/*jslint node: true */
+"use strict";
+
 var Q = require('q');
 var fs = require('fs');
-var path = require("path")
+var path = require("path");
 var ver1 = '/api/v1';
-var inSubnet = require('../../../../node_modules/insubnet/insubnet')
+var inSubnet = require('../../../../node_modules/insubnet/insubnet');
 
 module.exports = function (req, res) {
 	var deferred = Q.defer();
 
-	console.log('parserip: start')
+	console.log('parserip: start');
 
 
 	// step 1 - load ip address from devices
 	// load ip address json from assets
 	//
-	console.log('objectload: deviceip status: start')
+	console.log('objectload: deviceip status: start');
 
-	var deviceIpFilePath = '/assets/ipsubnet.json'
-	var deviceIpFilePathRead = path.join(__dirname, '../', deviceIpFilePath)
+	var deviceIpFilePath = '/assets/ipsubnet.json';
+	var deviceIpFilePathRead = path.join(__dirname, '../', deviceIpFilePath);
 
 	var deviceip = require(deviceIpFilePathRead);
 
 	//console.log(deviceip.device1)
 
-	console.log('objectload: deviceip status: end')
+	console.log('objectload: deviceip status: end');
 
 	// step 1 - load ip address from devices
 	// load ip address json from assets
 	//
-	console.log('objectload: deviceip status: start')
+	console.log('objectload: deviceip status: start');
 
-	var deviceListPath = '/assets/device.json'
-	var deviceListPathRead = path.join(__dirname, '../', deviceListPath)
+	var deviceListPath = '/assets/device.json';
+	var deviceListPathRead = path.join(__dirname, '../', deviceListPath);
 
 	var deviceList = require(deviceListPathRead);
 
 	//console.log(deviceList)
 
-	console.log('objectload: deviceip status: end')
+	console.log('objectload: deviceip status: end');
 
 
 
 	// step 2 - load ip address from routelist.json
 	// load ip address json from assets
 	//
-	console.log('objectload: routelist status: start')
+	console.log('objectload: routelist status: start');
 
-	var routelistFilePath = '/assets/routelist.json'
-	var routelistFilePathRead = path.join(__dirname, '../', routelistFilePath)
+	var routelistFilePath = '/assets/routelist.json';
+	var routelistFilePathRead = path.join(__dirname, '../', routelistFilePath);
 
 	var routelist = require(routelistFilePathRead);
 
-	console.log(routelist)
+	console.log(routelist);
 
-	console.log('objectload: routelist status: end')
+	console.log('objectload: routelist status: end');
 
 	// step 3 - load ip address from routelist.json
 	// load ip address json from assets
 	//
-	console.log('objectload: routersubnet status: start')
+	console.log('objectload: routersubnet status: start');
 
-	var routersubnetFilePath = '/assets/routersubnet.json'
-	var routersubnetFilePathRead = path.join(__dirname, '../', routersubnetFilePath)
+	var routersubnetFilePath = '/assets/routersubnet.json';
+	var routersubnetFilePathRead = path.join(__dirname, '../', routersubnetFilePath);
 
 	var routersubnet = require(routersubnetFilePathRead);
 
 	//console.log(routersubnet[21])
 
-	console.log('objectload: routersubnet status: end')
+	console.log('objectload: routersubnet status: end');
 
 	// step 4 - load ip address from routelist.json
 	// load ip address json from assets
 	//
-	console.log('objectload: device status: start')
+	console.log('objectload: device status: start');
 
-	var deviceFilePath = '/assets/device.json'
-	var deviceFilePathRead = path.join(__dirname, '../', deviceFilePath)
+	var deviceFilePath = '/assets/device.json';
+	var deviceFilePathRead = path.join(__dirname, '../', deviceFilePath);
 
 	var device = require(deviceFilePathRead);
 
 	//console.log(routersubnet)
 
-	console.log('objectload: device status: end')
+	console.log('objectload: device status: end');
 
 
 
@@ -93,35 +96,35 @@ module.exports = function (req, res) {
 
 	var prefixToIPAdress = function (stringOriginal) {
 
-		resultObject = {}
-		resultObject.original = stringOriginal
+		resultObject = {};
+		resultObject.original = stringOriginal;
 
-		var stringArray = []
+		var stringArray = [];
 
 		var stringArray = stringOriginal.split("/");
 
 		//console.log(stringArray)
 
-		resultObject.ip = stringArray[0]
-		resultObject.mask = stringArray[1]
+		resultObject.ip = stringArray[0];
+		resultObject.mask = stringArray[1];
 
 		//console.log(resultObject.mask)
 
-		return resultObject
-	}
+		return resultObject;
+	};
 
 	// Function 2
 	// Check to see if the ip address is in the subnet
 
-	var testIp1 = prefixToIPAdress(deviceip.device1.ipaddress)
+	var testIp1 = prefixToIPAdress(deviceip.device1.ipaddress);
 
 	//console.log(inSubnet.Auto(testIp1.ip, deviceip.device1.ipaddress))
 
 	// Function 2
 	// Check to see if the ip address is in the subnet
 
-	var newListObject = []
-	var tmpObject = {}
+	var newListObject = [];
+	var tmpObject = {};
 
 	for (var prop in routersubnet) {
 		//console.log(deviceip[prop])
@@ -133,19 +136,19 @@ module.exports = function (req, res) {
 			for (var listSubnetIteration in routersubnet[prop].listSubnet) {
 				//console.log(routersubnet[prop].listSubnet[listSubnetIteration])
 
-				var tmpObject = {}
+				var tmpObject = {};
 
 
-				tmpObject.description = routersubnet[prop].listSubnet[listSubnetIteration]
+				tmpObject.description = routersubnet[prop].listSubnet[listSubnetIteration];
 
 				//console.log(routersubnet[prop].listSubnet[listSubnetIteration])
 
-				tmpObject = prefixToIPAdress(tmpObject.description)
+				tmpObject = prefixToIPAdress(tmpObject.description);
 
 
 				//console.log(tmpObject)
 
-				newListObject.push(tmpObject)
+				newListObject.push(tmpObject);
 
 			}
 
@@ -157,11 +160,11 @@ module.exports = function (req, res) {
 
 	var initialPrefx = { original: '10.0.0.0/8',
   ip: '10.0.0.0',
-  mask: '8'}
+  mask: '8'};
 
 
 	newListObjectlen = newListObject.length;
-	deviceListlen = deviceList.length
+	deviceListlen = deviceList.length;
 
 	for (j=0; j<newListObjectlen; ++j) {
 		if (newListObject[j].hasOwnProperty('mask')) {
@@ -172,7 +175,7 @@ module.exports = function (req, res) {
 
 
 	//console.log(newListObject)
-	var ipPrefixSeed = 0
+	var ipPrefixSeed = 0;
 
 	for (i=0; i<33; ++i) {
 		for (j=0; j<newListObjectlen; ++j) {
@@ -196,11 +199,11 @@ module.exports = function (req, res) {
 
 
 	for(var i = 36; i>0; i--) {
-		console.log('Iteration Number ' + i)
+		console.log('Iteration Number ' + i);
 
-		var k = i
+		var k = i;
 		
-		k--
+		k--;
 
 		for (j=0; j<newListObjectlen; ++j) {
 			//console.log(deviceListlen)
@@ -215,9 +218,9 @@ module.exports = function (req, res) {
 									if (!deviceList[p].hasOwnProperty('allocated')) {
 										if (inSubnet.Auto(deviceList[p].node, newListObject[j].original)) {
 
-											newListObject[j][deviceList[p].node] = deviceList[p]
+											newListObject[j][deviceList[p].node] = deviceList[p];
 
-											deviceList[p].allocated = 'yes'
+											deviceList[p].allocated = 'yes';
 
 										}
 
@@ -241,9 +244,9 @@ module.exports = function (req, res) {
 									//console.log(inSubnet.Auto(newListObject[j].ip, newListObject[l].original))
 
 
-									newListObject[l].subordinate = newListObject[j]
+									newListObject[l].subordinate = newListObject[j];
 
-									newListObject[j].cleanup = 'yes'
+									newListObject[j].cleanup = 'yes';
 
 
 								}

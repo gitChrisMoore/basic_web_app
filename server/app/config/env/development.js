@@ -1,4 +1,5 @@
-'use strict';
+/*jslint node: true */
+"use strict";
 
 var path = require('path');
 var _ = require('lodash');

@@ -1,4 +1,5 @@
-'use strict';
+/*jslint node: true */
+"use strict";
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -28,4 +29,4 @@ var CircuitsSchema = new Schema({
   { collection: 'circuits' }
 );
 
-module.exports = mongoose.model('Circuits', CircuitsSchema);
+module.exports = exports = mongoose.model('Circuits', CircuitsSchema);

@@ -15,7 +15,7 @@ var agent = request.agent(app);
         //.expect('Content-Type', /json/)
         .end(function(err, res) {
           if (err) return done(err);
-          res.should.have.property('status', 404)
+          res.should.have.property('status', 404);
           done();
         });
       });

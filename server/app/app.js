@@ -1,9 +1,5 @@
-/**
- * Primary application file to start the server
- * 
- */
-
-'use strict';
+/*jslint node: true */
+"use strict";
 
 /**
 * Global Requirements
@@ -39,7 +35,7 @@ require('./routes')(app);
 * it will throw a error and stop
 */ 
 
-mongoose.connect(config.mongo.uri)
+mongoose.connect(config.mongo.uri);
 mongoose.connection.on('error', function(err) {
   console.log("Error while connecting to MongoDB:  " + err);
   process.exit();

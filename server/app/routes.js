@@ -1,11 +1,5 @@
-/**
- * routes.js
- * 
- * This file is responsable for declaring all of the routes
- * in which the Express middleware framework is listening for
- */
-
-'use strict';
+/*jslint node: true */
+"use strict";
 
 /**
 * Global requirements
