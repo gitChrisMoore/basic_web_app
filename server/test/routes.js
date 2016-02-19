@@ -1,3 +1,5 @@
+/*jshint expr: true*/
+
 var should = require('chai').should();
 var request = require('supertest');
 var mongoose = require('mongoose');
@@ -64,7 +66,7 @@ var testID = '';
 
       it('This should delete the object which was created in the previous tests', function(done) {
         
-        var buildString = 'find?string={"_id":"' + testID  +'"}';
+        //var buildString = 'find?string={"_id":"' + testID  +'"}';
 
         agent
         .delete(ver1 + '/amwayio/circuits/' + testID)
@@ -74,8 +76,9 @@ var testID = '';
           if (err) return done(err);
           res.should.have.property('status', 204);
           //res.body.should.be.a('array');
-          testID = res.body._id;
+          //testID = res.body._id;
           done();
         });
-      });
+        });
+
     });

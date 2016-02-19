@@ -96,10 +96,10 @@ module.exports = function (req, res) {
 
 	var prefixToIPAdress = function (stringOriginal) {
 
-		resultObject = {};
+		var resultObject = {};
 		resultObject.original = stringOriginal;
 
-		var stringArray = [];
+		//var stringArray = [];
 
 		var stringArray = stringOriginal.split("/");
 
@@ -136,7 +136,7 @@ module.exports = function (req, res) {
 			for (var listSubnetIteration in routersubnet[prop].listSubnet) {
 				//console.log(routersubnet[prop].listSubnet[listSubnetIteration])
 
-				var tmpObject = {};
+				//var tmpObject = {};
 
 
 				tmpObject.description = routersubnet[prop].listSubnet[listSubnetIteration];
@@ -163,10 +163,10 @@ module.exports = function (req, res) {
   mask: '8'};
 
 
-	newListObjectlen = newListObject.length;
-	deviceListlen = deviceList.length;
+	var newListObjectlen = newListObject.length;
+	var deviceListlen = deviceList.length;
 
-	for (j=0; j<newListObjectlen; ++j) {
+	for (var j=0; j<newListObjectlen; ++j) {
 		if (newListObject[j].hasOwnProperty('mask')) {
 			//console.log(typeof(newListObject[j].mask))
 		}
@@ -213,7 +213,7 @@ module.exports = function (req, res) {
 				//newListObject[j].arr = {}
 
 
-								for (p=0; p<deviceListlen; ++p) {
+								for (var p=0; p<deviceListlen; ++p) {
 									//console.log('ya finally hit' + p)
 									if (!deviceList[p].hasOwnProperty('allocated')) {
 										if (inSubnet.Auto(deviceList[p].node, newListObject[j].original)) {
@@ -233,7 +233,7 @@ module.exports = function (req, res) {
 
 				if (newListObject[j].mask == i) {
 
-					for (l=0; l<newListObjectlen; ++l) {
+					for (var l=0; l<newListObjectlen; ++l) {
 
 						if (newListObject[l].hasOwnProperty('mask')) {
 
@@ -287,19 +287,19 @@ module.exports = function (req, res) {
     // do stuff with i 
 	}
 
-	var secondObjectList = []
+	var secondObjectList = [];
 
 	for (j=0; j<newListObjectlen; ++j) {
 
 		if (!newListObject[j].hasOwnProperty('cleanup')) {
 
-			secondObjectList.push(newListObject[j])
+			secondObjectList.push(newListObject[j]);
 
 		}
 
 	}
 
-	console.log('start object')
+	console.log('start object');
 
 	//console.log(JSON.stringify(secondObjectList))
 	//console.log(secondObjectList.length)
@@ -312,6 +312,6 @@ module.exports = function (req, res) {
 	  console.log('Hello World > helloworld.txt');
 	});
 
-	console.log('parserip: end')
+	console.log('parserip: end');
 	return deferred.promise;
 };
